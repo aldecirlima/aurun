@@ -10,6 +10,7 @@
 </h:head>
 <h:body>
 	<p:fieldset legend="Cadastro de participantes">
+		<p:messages />
 		<h:form>
 			<p:panelGrid columns="2">
 				<p:outputLabel value="Nome: " />
@@ -23,7 +24,7 @@
 
 			</p:panelGrid>
 			<br />
-			<p:commandButton action="#{participanteBean.cadastrar}"
+			<p:commandButton action="#{participanteBean.cadastrar}" ajax="false"
 				value="Cadastrar" update="@this :tableParticipantes" />
 		</h:form>
 		<br />
