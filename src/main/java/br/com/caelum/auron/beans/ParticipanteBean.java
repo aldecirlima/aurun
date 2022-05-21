@@ -24,10 +24,10 @@ public class ParticipanteBean {
 
 	@Inject
 	private ParticipanteDao participanteDao;
-	
+
 	@Inject
 	private Subject user;
-	
+
 	@Inject
 	private FacesContext ctx;
 
@@ -35,6 +35,9 @@ public class ParticipanteBean {
 
 	public void cadastrar() {
 		participanteDao.inserir(participante);
+		participantes.add(participante);
+		participante = new Participante();
+
 	}
 
 	public List<Participante> getParticipantes() {

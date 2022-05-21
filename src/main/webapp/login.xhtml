@@ -17,7 +17,7 @@
 			<p:outputLabel value="Senha: " />
 			<p:password value="#{participanteBean.participante.senha}" />
 
-			<p:commandButton value="Logar" action="#{participanteBean.login}"
+			<p:commandButton value="Logar" action="#{participanteBean.login}" update="@this"
 				ajax="false" />
 
 		</p:panelGrid>
